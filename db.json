@@ -1,0 +1,66 @@
+{
+  "projects": [
+    {
+      "id": "34a8",
+      "name": "Teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "any": 0,
+      "services": []
+    },
+    {
+      "id": "6f9c",
+      "name": "teeeee",
+      "budget": "231",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "any": 0,
+      "services": []
+    },
+    {
+      "id": "310c",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "name": "asda",
+      "budget": "222",
+      "any": 0,
+      "services": []
+    },
+    {
+      "id": "2542",
+      "name": "ddwww",
+      "budget": "223331",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "any": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ]
+}

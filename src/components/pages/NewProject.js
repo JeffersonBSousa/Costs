@@ -1,13 +1,41 @@
+import { useNavigate } from 'react-router-dom'
+
 import ProjecForm from '../project/ProjectForm'
 
 import styles from './NewProject.module.css'
 
-function NewProject( ) {
+function NewProject() {
+    const navigate = useNavigate()
+
+    function createPost(project) {
+
+        //initialize cost and services
+        project.any = 0
+        project.services = []
+
+        fetch("http://localhost:5000/projects", {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(project),
+        })
+            .then((resp) => resp.json())
+            .then((data) => {
+                console.log(data)
+                // redirect
+                const state = { message: "Projeto criado com sucesso!" };
+                navigate("/projects", { state });
+            })
+            .catch((err) => console.log(err))
+
+    }
+
     return (
         <div className={styles.newproject_container}>
             <h1>Criar Projeto</h1>
             <p>Crie seu projeto para depois adicionar os serviços</p>
-            <ProjecForm btnText="Criar Projeto"/>
+            <ProjecForm handleSubmit={createPost} btnText="Criar Projeto" />
         </div>
     )
 }
