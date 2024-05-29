@@ -9,7 +9,21 @@
         "name": "Desenvolvimento"
       },
       "any": 0,
-      "services": []
+      "services": [
+        {
+          "name": "teste B",
+          "cost": "25",
+          "description": "Segundo teste",
+          "id": "58b1deab-829e-49df-8c29-4d53da5dc2d6"
+        },
+        {
+          "name": "teste A",
+          "cost": "50",
+          "description": "Primeiro teste",
+          "id": "563ff9b9-4689-4c32-8983-b2fbaf5fc73e"
+        }
+      ],
+      "cost": 75
     },
     {
       "id": "4efe",
@@ -23,174 +37,12 @@
       "services": [
         {
           "name": "Teste",
-          "cost": "366666",
-          "description": "a",
-          "id": "5885d460-8e5c-47e5-88f1-e5cda9faa7f3"
-        },
-        {
-          "name": "Teste",
-          "cost": "222222222",
-          "description": "a",
-          "id": "33983029-bc2c-4cfd-af3b-676e82e73e4c"
-        },
-        {
-          "name": "Teste",
-          "cost": "2222222222",
-          "description": "aa",
-          "id": "630a5fff-94c5-4a18-8b32-a0db154da9b1"
-        },
-        {
-          "name": "a",
-          "cost": "222222222222",
-          "description": "a",
-          "id": "87a97117-97cc-49aa-8f27-3de0d23a0af1"
-        },
-        {
-          "id": "f1795797-be4f-4bb9-a759-4be74c5f0b43",
-          "name": "zzjefferson",
-          "cost": "222222222222",
-          "description": "aa"
-        },
-        {
-          "name": "Teste",
-          "cost": "33333333333",
-          "description": "a",
-          "id": "44a3057a-7f8c-4b4b-9e4b-ba971fce2361"
-        },
-        {
-          "name": "Teste",
-          "cost": "33333333333",
-          "description": "a",
-          "id": "44a3057a-7f8c-4b4b-9e4b-ba971fce2361"
-        },
-        {
-          "name": "zzjefferson",
-          "cost": "22222222222222",
-          "description": "a",
-          "id": "b9b2bcc5-3e29-411f-828a-e90034c752e9"
-        },
-        {
-          "name": "zzjefferson",
-          "cost": "22222222222222",
-          "description": "a",
-          "id": "b9b2bcc5-3e29-411f-828a-e90034c752e9"
-        },
-        {
-          "name": "Teste",
-          "cost": "2222222222222",
-          "description": "a",
-          "id": "ee780928-b41f-4655-af91-8a7181c570de"
-        },
-        {
-          "name": "Teste",
-          "cost": "2222222222",
-          "description": "a",
-          "id": "d685cb74-c3b6-4744-8c31-03fceda46e8b"
-        },
-        {
-          "cost": "3333333333",
-          "name": "a",
-          "description": "a",
-          "id": "3b8ed0c4-3e4b-4092-8bd8-be835e39d94f"
-        },
-        {
-          "name": "Teste",
-          "cost": "2222222111",
-          "description": "a",
-          "id": "49931aea-239b-45e2-98b3-11aa22ebce28"
-        },
-        {
-          "cost": "222222222",
-          "name": "a",
-          "description": "a",
-          "id": "29583553-cc5e-4697-9d49-b9deb7c1c0c2"
-        },
-        {
-          "name": "Teste",
-          "cost": "222222222",
-          "description": "aa",
-          "id": "955723de-4507-4854-8d86-34ec8f479304"
-        },
-        {
-          "name": "2",
-          "cost": "5225234",
-          "description": "aa",
-          "id": "3e529709-8810-4f20-9a72-adb5ffe8e86f"
-        },
-        {
-          "name": "2",
-          "cost": "5225234",
-          "description": "aa",
-          "id": "3e529709-8810-4f20-9a72-adb5ffe8e86f"
-        },
-        {
-          "name": "Teste",
-          "cost": "3333333333333",
-          "description": "testes",
-          "id": "fc88d1d3-bccf-42c3-ba28-482d05df6461"
-        },
-        {
-          "name": "Teste",
-          "cost": "3333333333333",
-          "description": "testes",
-          "id": "fc88d1d3-bccf-42c3-ba28-482d05df6461"
-        },
-        {
-          "name": "Teste",
-          "cost": "3333333333333",
-          "description": "testes",
-          "id": "fc88d1d3-bccf-42c3-ba28-482d05df6461"
-        },
-        {
-          "name": "Teste",
-          "cost": "3333333333333",
-          "description": "testes",
-          "id": "fc88d1d3-bccf-42c3-ba28-482d05df6461"
-        },
-        {
-          "name": "Teste",
-          "cost": "3333333333333",
-          "description": "testes",
-          "id": "fc45f9b6-b73b-4983-87c3-7eeffdc76163"
-        },
-        {
-          "name": "Teste",
-          "cost": "3333333333333",
-          "description": "testes",
-          "id": "b3e44281-2f50-4355-b085-249505b98c1f"
-        },
-        {
-          "name": "Teste",
-          "cost": "3333333333333",
-          "description": "testes",
-          "id": "b3e44281-2f50-4355-b085-249505b98c1f"
-        },
-        {
-          "name": "Teste",
-          "cost": "213131",
-          "description": "testesasa",
-          "id": "b8cdbae7-82f5-4451-a300-8151fc372ad1"
-        },
-        {
-          "name": "Teste",
-          "cost": "213131",
-          "description": "testesasa",
-          "id": "b8cdbae7-82f5-4451-a300-8151fc372ad1"
-        },
-        {
-          "name": "Teste",
-          "cost": "213131",
-          "description": "testesasa",
-          "id": "b8cdbae7-82f5-4451-a300-8151fc372ad1"
-        },
-        {
-          "name": "Teste",
-          "cost": "213131",
-          "description": "testesasa",
-          "id": "b8cdbae7-82f5-4451-a300-8151fc372ad1"
+          "cost": "233",
+          "description": "Apenas teste",
+          "id": "abaf217c-ce2a-410c-b2ef-6fa0e4594d42"
         }
       ],
-      "cost": null
+      "cost": 233
     }
   ],
   "categories": [
