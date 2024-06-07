@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": "b43d",
-      "name": "Teste",
+      "name": "Teste db.json",
       "budget": "5400",
       "category": {
         "id": "2",
@@ -11,17 +11,12 @@
       "any": 0,
       "services": [
         {
-          "name": "teste B",
+          "name": "Ta no db.json",
           "cost": "25",
-          "description": "Segundo teste",
+          "description": "Serviço ainda no db.json",
           "id": "58b1deab-829e-49df-8c29-4d53da5dc2d6"
-        },
-        {
-          "name": "teste A",
-          "cost": "50",
-          "description": "Primeiro teste",
-          "id": "563ff9b9-4689-4c32-8983-b2fbaf5fc73e"
         }
+        
       ],
       "cost": 75
     },
@@ -36,9 +31,9 @@
       "any": 0,
       "services": [
         {
-          "name": "Teste",
+          "name": "db.json",
           "cost": "233",
-          "description": "Apenas teste",
+          "description": "Serviço ainda no db.json",
           "id": "abaf217c-ce2a-410c-b2ef-6fa0e4594d42"
         }
       ],
@@ -48,19 +43,19 @@
   "categories": [
     {
       "id": "1",
-      "name": "Infra"
+      "name": "Json12"
     },
     {
       "id": "2",
-      "name": "Desenvolvimento"
+      "name": "Json1"
     },
     {
       "id": "3",
-      "name": "Design"
+      "name": "Json132"
     },
     {
       "id": "4",
-      "name": "Planejamento"
+      "name": "Json14535"
     }
   ]
 }

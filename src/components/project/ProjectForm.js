@@ -1,58 +1,68 @@
-import { useEffect, useState } from 'react'
+// src/components/ProjectForm.js
+import { useState } from 'react';
+import styles from './ProjectForm.module.css';
+import Input from '../form/Input';
+import Select from '../form/Select';
+import SubmitButton from '../form/SubmitButton';
+import useCategories from '../hooks/useCategories';
 
-import styles from './ProjectForm.module.css'
-import Input from '../form/Input'
-import Select from '../form/Select'
-import SubmitButton from '../form/SubmitButton'
+function ProjectForm({ handleSubmit, btnText, projectData }) {
+  const [project, setProject] = useState(projectData || {});
+  const { categories, loading } = useCategories();
 
-function ProjecForm({ handleSubmit, btnText, projectData }) {
+  const submit = (e) => {
+    e.preventDefault();
+    handleSubmit(project);
+  };
 
-    const [categories, setCategories] = useState([])
-    const [project, setProject] = useState(projectData || {})
+  const handleChange = (e) => {
+    setProject({ ...project, [e.target.name]: e.target.value });
+  };
 
-    useEffect(() => {
-        fetch("http://localhost:5000/categories", {
-            method: "GET",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-            .then((resp) => resp.json())
-            .then((data) => {
-                setCategories(data)
-            })
-            .catch((err) => console.log(err))
+  const handleCategory = (e) => {
+    setProject({
+      ...project,
+      category: {
+        id: e.target.value,
+        name: e.target.options[e.target.selectedIndex].text,
+      },
+    });
+  };
 
-    }, [])
+  console.log("Categories in ProjectForm: ", categories); // Adicionando log para depuração
 
-    const submit = (e) => {
-        e.preventDefault()
-        //console.log(project)
-        handleSubmit(project)
-    }
+  if (loading) {
+    return <p>Carregando categorias...</p>;
+  }
 
-    function handleChange(e) {
-        setProject({ ...project, [e.target.name]: e.target.value })
-
-    }
-
-    function handleCategory(e) {
-        setProject({
-            ...project,
-            category: {
-                id: e.target.value,
-                name: e.target.options[e.target.selectedIndex].text,
-            },
-        })
-    }
-    return (
-        <form onSubmit={submit} className={styles.form}>
-            <Input value={project.name ? project.name : ''} type="text" text="Nome do projeto" name="name" placeholder="Insira o nome do projeto" handleOnChange={handleChange} />
-            <Input value={project.budget ? project.budget : ''} type="number" text="Orçamento do projeto" name="budget" placeholder="Insira o orçamento total" handleOnChange={handleChange} />
-            <Select value={project.category ? project.category.id : ''} options={categories} name="category_id" text="Selecione a categoria" handleOnChange={handleCategory} />
-            <SubmitButton text={btnText} />
-        </form>
-    )
+  return (
+    <form onSubmit={submit} className={styles.form}>
+      <Input
+        value={project.name ? project.name : ''}
+        type="text"
+        text="Nome do projeto"
+        name="name"
+        placeholder="Insira o nome do projeto"
+        handleOnChange={handleChange}
+      />
+      <Input
+        value={project.budget ? project.budget : ''}
+        type="number"
+        text="Orçamento do projeto"
+        name="budget"
+        placeholder="Insira o orçamento total"
+        handleOnChange={handleChange}
+      />
+      <Select
+        value={project.category ? project.category.id : ''}
+        options={categories}
+        name="category_id"
+        text="Selecione a categoria"
+        handleOnChange={handleCategory}
+      />
+      <SubmitButton text={btnText} />
+    </form>
+  );
 }
 
-export default ProjecForm
+export default ProjectForm;
