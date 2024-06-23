@@ -10,12 +10,13 @@ function ProjectCard({ id, name, budget, category, handleRemover }) {
 
   return (
     <div className={styles.project_card}>
-      <h4>{name}</h4>
-      <p>
-        <span>Orçamento:</span> R${budget}
+      <h4>{name || "Nome não disponível"}</h4>
+      <p> 
+        <span>Orçamento:</span> R${budget || "Não definido"}
       </p>
       <p className={styles.category_text}>
-        <span className={`${styles[category.name.toLowerCase()]}`}></span> {category.name}
+        <span className={`${category && category.name ? styles[category.name.toLowerCase()] : ''}`}></span> 
+        {category && category.name ? category.name : "Categoria não definida"}
       </p>
       <div className={styles.project_card_actions}>
         <Link to={`/project/${id}`}>

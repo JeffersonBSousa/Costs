@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import styles from './ProjectForm.module.css';
 import Input from '../form/Input';
@@ -38,7 +37,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   return (
     <form onSubmit={submit} className={styles.form}>
       <Input
-        value={project.name ? project.name : ''}
+        value={project.name || ''}
         type="text"
         text="Nome do projeto"
         name="name"
@@ -46,7 +45,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         handleOnChange={handleChange}
       />
       <Input
-        value={project.budget ? project.budget : ''}
+        value={project.budget || ''}
         type="number"
         text="Orçamento do projeto"
         name="budget"
