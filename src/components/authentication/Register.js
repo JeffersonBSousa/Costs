@@ -13,6 +13,7 @@ function Register() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const [success, setSuccess] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,16 +25,23 @@ function Register() {
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/projects");
+      setSuccess("Conta criada com sucesso!"); // Definir mensagem de sucesso
+      setError(""); // Limpar mensagem de erro, se houver
+      setTimeout(() => {
+        navigate("/projects");
+      }, 2000); // Navegar após 2 segundos
     } catch (error) {
       setError(error.message);
+      setSuccess(""); // Limpar mensagem de sucesso, se houver
     }
   };
 
   return (
     <div className={styles.newproject_container}>
-      <h1>Registrar</h1>
+      <h1>Cadastre-se</h1>
       {error && <p className={styles.error}>{error}</p>}
+      {success && <p className={styles.success}>{success}</p>}{" "}
+      {/* Exibir mensagem de sucesso */}
       <form onSubmit={handleSubmit} className={styles.form}>
         <div>
           <Input
@@ -69,7 +77,7 @@ function Register() {
           />
         </div>
         <button className={styles.btn} type="submit">
-          Registrar
+          Cadastrar
         </button>
       </form>
     </div>

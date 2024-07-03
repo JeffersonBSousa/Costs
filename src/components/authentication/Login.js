@@ -2,6 +2,8 @@ import { useState } from "react";
 import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import styles from "./Login.module.css";
+import Input from "../form/Input";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -19,22 +21,30 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className={styles.newproject_container}>
       <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <input
+      <form onSubmit={handleLogin} className={styles.form}>
+        <Input
           type="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
+          text="E-mail"
+          name="email"
+          handleOnChange={(e) => setEmail(e.target.value)}
+          placeholder="Insira seu e-mail"
+          required
         />
-        <input
+        <Input
           type="password"
+          text="Senha"
+          name="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
+          handleOnChange={(e) => setPassword(e.target.value)}
+          placeholder="Insira sua senha"
+          required
         />
-        <button type="submit">Login</button>
+        <button className={styles.btn} type="submit">
+          Login
+        </button>
       </form>
     </div>
   );

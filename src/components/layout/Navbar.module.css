@@ -21,3 +21,9 @@
 .item a:hover {
     color: #ffbb33;
 }
+
+.email{
+    color:#ffbb33;
+    margin-right: 1em;
+    text-decoration: none;
+}
